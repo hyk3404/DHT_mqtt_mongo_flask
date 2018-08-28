@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body >
+    <p align = "right" ></p>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr> 
+                    <td>celsius</td>
+					<td>fahrenheit</td>
+					<td>humidity</td>
+					<td>date</td>
+					<td>time</td>
+					<td>_id</td>
+            </tr>    
+		</thead>
+		{% for select in selectlist %}
+			<tbody>
+				<tr>
+					<td>{{ select.celsius }}</td> 
+					<td>{{ select.fahrenheit }}</td>
+					<td>{{ select.humidity }}</td>
+					<td>{{ select.date }}</td>
+					<td>{{ select.time }}</td>
+					<td>{{ select._id }}</td>
+				</tr>
+			</tbody>	
+		{% endfor %}
+    </table>
+</body>
+</html>
